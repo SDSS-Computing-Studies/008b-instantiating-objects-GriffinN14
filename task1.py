@@ -105,11 +105,15 @@ while True:
     print ("2. Retrive a pet")
     print ("3. Exit")
     print ("===================")
-    choice = input("Enter number : ").strip()
+    choice = input("Enter number : ")
     if int(choice) == 1:
         animals.append(pet())
     elif int(choice) == 2:
-        animalName = (input("Enter animals name ")
-    else:
-        if int(choice) == 3:
-            break
+        i = 0
+        animalName = (input("Enter animals name "))
+        while i != len(animals) + 1:
+            if animalName == animals[i].name:
+                print (animals[i].name + " " + animals[i].animal + "\n" + animals[i].breed + " is owned by " + animals[i].owner)
+                break
+            else:
+                i = i + 1
