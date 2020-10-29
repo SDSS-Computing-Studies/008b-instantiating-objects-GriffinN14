@@ -117,3 +117,6 @@ while True:
                 break
             else:
                 i = i + 1
+    elif int(choice) == 3:
+        print ("Good bye")
+        break
